@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+        <meta charset="UTF-8">
+        <title> 시맨틱태그 연습 ♪ </title>
+        <style>
+                /* head 안에 style을 넣는다 */
+        /* 스타일 태그 주석과 주석은 다르다 */
+        div{width:800px; margin:0 auto;} /*화면 좌우 가운데 위치*/
+        header {background:rgb(245, 212, 241);
+                width:800px;height:120px;
+                border: 3px dotted hotpink;/* 테두리 선 설정 */
+        text-align: center; line-height: 120px;
+        /*헤더 높이가 120이기 때문에 줄 간격을 120으로 맞춰주면 된다
+        한 줄이라 가능한 것임*/} 
+        main {background:rgb(183, 244, 213);
+                width:800px;height:600px;
+                border: 3px solid rgb(47, 181, 146);}
+        footer {background:rgb(250, 254, 196);
+                width:800px;height:120px;
+                border: 3px solid rgb(255, 230, 105);
+                text-align: center; line-height: 120px;}
+        article {padding:20px;} /*padding: 옆으로 보내기*/
+        section {background:rgba(255, 255, 255, 0.136); 
+                width: 400px; height: 130px;
+        padding-left: 20px;
+        border: 2px dotted rgb(255, 255, 255);
+        border-radius: 10px; /* 모서리 둥글게 만들기 */
+        margin:10px;/*섹션 끼리 띄우기*/}
+        </style>
+        <!-- margin은 객체의 바깥 테두리 쪽
+        padding은 안쪽(내부)의 여백 -->
+</head>
+<body>
+        <div>
+        <header>
+<nav>Intro Profile Music Movie</nav>
+<!-- alt+shift+a 블록 주석 만들기
+주석 모양이 위에 style이랑 다르다 -->
+        </header>
+        
+        <main>
+<article>
+<h3>사계절</h3>
+<section>
+<h4>봄</h4>
+<ol type="A" start="3"> <!--타입과 시작 번호를 지정할 수 있다.-->
+<li>꽃</li>
+<li>소풍</li>
+</ol>
+<!-- <blockquote> 봄소풍 </blockquote> -->
+</section>
+
+<section>
+<h4>여름</h4>
+<ul type="square">
+<li>바다</li>
+<li>매미</li>
+</ul>
+</section>
+
+<section>
+<h4>가을</h4>
+단풍<br>
+추수<br>
+</section>
+</article>
+
+<strong><em>DUKSUNG</em></strong><br> 
+<!-- 화면 낭독기가 strong과 em은 읽을 수 있으나 b와 i는 못 읽음 -->
+<b><i>DUKSUNG</i></b>
+
+        </main>
+
+        <footer>
+2023.03.17
+        </footer>
+</div>
+</body>
+</html>

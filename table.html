@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+      <meta charset="UTF-8">
+      <title>테이블 연습◐△□</title>
+      <style>
+            /* div{width:200px; height: 200px;
+            border: 1px dotted rgb(134, 51, 92);
+      text-align: center; line-height: 200px;
+      } 1. 박스 내부 1줄 정가운데*/
+      div {font-size: 100px; color: darkred;
+            font-family: Impact; 
+            /* position:absolute;
+            left: 50%; top: 50%; 
+            transform: translate(-50%,-50%); 
+            2. 화면 div를 정가운데(정중앙) set.. */
+
+            width:500px;
+            margin: 0 auto; 
+            /* 3. 개체의 너비 설정 후 화면 좌우 가운데 */
+
+            border: 2px dotted palevioletred; 
+            text-align: center;
+            /* margin이 작동하려면 div의 크기가 잡혀야 한다 */
+            /* 흔히 쓰는 건 0 auto임
+            퍼센트를 쓰면 스크롤바가 생김
+            auto auto는 되긴 하는데 정 가운데가 아님-> 안됨 */
+
+            /* font-color는 존재하지 않는다. font-family로 서체변경.
+            여러 개 쓰면 적용 안됐을 때 다음 것으로 넘어간다??
+            position을 통해 기준점을 잡음. 
+            absolute는 왼쪽 맨 위 꼭짓점을 말함.
+            픽셀이 아닌 %퍼센트를 사용하면 화면 비율대로 됨.
+            transform: translate(-50%, -50%)는 div의 반쪽만큼만
+            왼쪽으로 이동, 반쪽만큼만 위로 이동하게 해줘서 화면 정중앙에
+            위치하게 해줌.
+
+            */}
+
+            table {border:2px solid rgb(233, 186, 67)}
+            td{border:1px solid rgb(233, 190, 84); 
+                  width: 100px; height: 100px;
+            text-align: center;}
+            th{border:1px dotted rgb(233, 190, 84); 
+            width: 100px; height: 100px;
+            }
+            /* .b1{background: rgb(244, 244, 190)} 
+            아직 이거 할 때가 아님*/
+
+            /* th는 text-align: center을 적용하지 않아도 항상 가운데 */
+
+            /* td,th {border:1px solid rgb(233, 190, 84); 
+                  width: 100px; height: 100px;
+            text-align: center;}
+            이렇게 쉼표로도 가능~ */
+
+
+      </style>
+</head>
+<!-- 콜론():)이 ==역할을 함. 
+      속성값을 넣을 때는 쉼표를 찍지 않는다!!
+line-height는 어쨌든 줄 간격 ~.~
+-->
+<body>
+      <!-- <div>test</div> -->
+      
+      <h3> 내가 좋아하는 것들 </h3>
+      <ol type="A" start="10"> 
+            <!-- 순서 목록 -->
+            <li> 여행 </li>
+            <li> 영화 </li>
+            <li> 게임 </li>
+            <li> 음악 </li>
+      </ol>
+      
+      <h3> 내가 하고 싶은 것들 </h3>
+      <ul>
+            <!-- 순서 없는 목록 -->
+            <li> 여행 </li>
+            <li> 영화 </li>
+            <li> 게임 </li>
+            <li> 음악 </li>
+      </ul>
+
+      <h3> 사계절 </h3>
+      <dl>
+            <!-- 설명 목록 -->
+            <dt> 봄 </dt>
+            <dd> Spring </dd>
+            <dd> Flower </dd>
+
+            <dt> 여름 </dt>
+            <dd> Summer </dd>
+            <dd> Ocean </dd>
+
+
+      </dl>
+
+      <table>
+            <caption> 테이블 연습 </caption>
+            <thead>
+                  <tr>
+                        <td>1 </td>
+                        <td>2 </td>
+                        <td>3 </td>
+                  </tr>
+            </thead>
+            <tbody>
+                  <tr>
+                        <td>4</td>
+                        <td colspan="2">5 </td>
+                        <!-- <td>6 </td> -->
+                        <!-- 위에처럼 합치면 2칸이 되어서
+                  6번을 삭제하거나 주석처리 해야 함 -->
+                  </tr>
+                  <tr>
+                        <td>7 </td>
+                        <td>8 </td>
+                        <td>9</td>
+                  </tr>
+            </tbody>
+
+      </table>
+
+      <table>
+            <caption> 나의 시간표 </caption>
+
+                  <!-- thead와 tbody 태그로 제목 본문을 나눌 수 있음 -->
+            <tr>
+                  <!-- 1행 -->
+                  <th></th>
+                  <th>월</th>
+                  <th>화</th>
+                  <th>수</th>
+                  <th>목</th>
+                  <th>금</th>
+            </tr>
+            <tr>
+                  <!-- 2행 -->
+                  <th>1교시</th>
+                  <td>  </td>
+                  <td rowspan="2" bgcolor=#FAF4C0> 웹프디</td>
+                  <td rowspan="3" bgcolor="#E4F7BA"> 운영체제 </td>
+                  <td>  </td>
+                  <td>  </td>
+            </tr>
+            <tr>
+                  <!-- 3행 -->
+                  <th>2교시</th>
+                  <td bgcolor="#E4F7BA"> 양자컴퓨팅 </td>
+                  <!-- <td>  </td> -->
+                  <!-- <td>  </td> -->
+                  <td>  </td>
+                  <td>  </td>
+            </tr>
+
+            <tr>
+                  <!-- 4행 -->
+                  <th>3교시</th>
+                  <td>  </td>
+                  <td>  </td>
+                  <!-- <td> </td> -->
+                  <td>  </td>
+                  <td>  </td>
+            </tr>
+            <!-- 셀 합치기
+            시작하는 셀 번호부터 쓸 것
+      rowspan 행 합치기
+      colspan 열 합치기 
+      tbody와 thead로 나눴을 때는 구조적으로 다름
+      구조적으로 나누면 열과 행이 합쳐지지 않으니 주의!!
+      -->
+      </table>
+      <img src="ghost.png" alt="그림이 안 보일 때" width="200px">
+      <img src="ghost.png" alt="그림이 안 보일 때" width=25%>
+      <!-- 그림이 제대로 안 올라 갔을 때는 alt에 쓴 글만 보임.
+            그림이 잘 올라가면 alt에 쓴 글은 보이지 않음.
+            퍼센트를 쓰면 height를 조정하지 않아도 자동으로 비율 계산이 돼서 좋음
+            창 크기를 조정하면 그만큼 비율이 계산돼서 사진크기가 달라짐
+
+       -->
+       <p></p>
+      
+       <object data="fire.mp4" width="200px" height="200px"></object>
+       <object data="bgsound.mp3" width="200px" height="200px"></object>
+       <object data="test.pdf" width="200px" height="200px"></object>
+       <p></p>
+       <!-- 혹시 object가 안되면 embed를 사용해서 넣으란다..
+      파일 아래에 있는 걸 넣고 싶으면 filename/imgname 일캐 넣으면 된다~
+      object는 data
+      embed는 src를 쓴다
+      embed는 닫는 태그가 없음
+      엣지는 자동으로 실행이 되나 크롬은 자동으로 실행되지 않음
+      요즘은 자동으로 실행되지 않는 추세-->
+
+      <embed src="fire.mp4" width="200px" height="200px">
+      <embed src="bgsound.mp3" width="200px" height="200px">
+      <embed src="test.pdf" width="200px" height="200px">
+      <p></p>
+
+      <audio src="bgsound.mp3" autoplay loop controls></audio>
+      <video src="fire.mp4" autoplay muted></video>
+      <!-- autoplay: 자동 실행, loop: 무한 반복,
+      controls: 컨트롤 바 생성?
+      muted: 음소거
+      크롬에서는 음소거를 넣어줘야 재생이 된다(엣지는 muted 안해도 자동 재생이 됨)-->
+      <div>DUKSUNG</div>
+
+</body>
+</html>

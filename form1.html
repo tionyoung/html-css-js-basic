@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+      <meta charset="UTF-8">
+      <title> 테이블 만들기 ! </title>
+      <style>
+            table {border: 1px solid hotpink;}
+            td {border: 1px solid hotpink;
+            width: 100px; height: 100px; text-align:center;}
+            form {width:700px; margin:20px auto;
+           /* margin 앞 숫자는 위아래, 뒤에는 양 옆 */
+            }
+            fieldset {border: 2px solid hotpink; 
+                  border-radius: 5px; 
+                  margin-top: 5px;
+            background-color: rgb(255, 247, 236);}
+                  /* margin-top으로 위의 여백을 줌 */
+            legend {font-size:larger; font-family:  'Courier New'; 
+            color: rgb(14, 72, 11);
+            padding: 5px;
+            text-align: right;
+            background-color: rgba(255, 156, 156, 0.364);
+      border-radius: 10%;}
+            /* padding을 주면 박스와 글씨가 조금 떨어진다. */
+            /* 글씨 크기 조절: font-size
+            글씨체: font-family
+            글씨 색상: color //주의: font-color 아님!!!! 이딴 건 없음 ㅋㅋ */
+            label {display:inline-block; width:100px;}
+            /* display: block은 label 하나하나당으로 입력블록이 내려와 있음
+            display: inline-block은 줄이 맞으면서 옆에 입력블록이 있음 */
+            .lb1 { width: 500px; margin:0 auto;
+            }
+      </style>
+</head>
+<body>
+      <table>
+            <caption> happy ^ ^ </caption>
+            <tr>
+                  <td colspan="2"> 1 </td>
+                  
+            </tr>
+            <tr>
+                  <td bgcolor="pink"> 2 </td>
+                  <td> 3 </td>
+            </tr>
+      </table>
+      <h3> 사계절 </h3>
+      <!--맵 만들기-->
+      <img src="ghost.png" usemap="#img1">
+      <!-- 현재는 이미지 따로 지도 따로 -->
+      <!-- usemap 할 때 썼던 이름으로 map에 적어줘야함 원본의 이름은 x -->
+      <map name="img1">
+            <area shape="rect" coords="133, 283, 290, 407" href=http://www.ds.ac.kr  target="_blank">
+            <area shape="circle" coords="153, 209, 20" href=http://www.naver.com target="_blank">
+      </map>
+
+      <!--폼 만들기-->
+      <form action="index.html" method="get">
+      <!-- get은 넘어가는 게 주소에 다 보여서 일단 실습에서는 그것을 이용한다고.. -->
+      <h3> 폼 만들기 연습 0_- </h3>
+      <!-- fieldset 먼저 쓰고 그 다음에 legend를 써야 함 -->
+      <fieldset>
+            <legend> Profile </legend>
+            <label class="lb1"> 이름 <input type="next" name="name2"> </label><br>
+
+            <ul>
+                  <li>
+            <label for="id1"> 아이디 </label>
+            <input type="text" id="id1" maxlength="5" size="10"
+            readonly 
+            value="이름 입력"><br></li>
+            <!-- id는 그냥 식별하는 인식표 정도 
+            디자인을 더 이쁘게 하고 싶다면 이름처럼 하지말고
+      아이디처럼 따로따로 하는 것이 더 나음
+      옆에 br도 쓸 수 있음
+      maxlength 를 쓰면 그 숫자 이상은 적을 수 없다
+      size는 상자의 길이다 기본 크기는 20일 것
+      value는 기본 값으로 들어가 있는 값  
+      무엇을 받아갔는지 알고 싶으면 name을 써야 함
+      readonly는 커서가 들어가지 않고 읽을 수만 있음-->
+
+      <li>
+      <label for="pw1"> 패스워드 </label>
+      <input type="password" id="pw1" required><br></li>
+      <!-- type을 password라고 지정하면 보이지 않음 -->
+      </ul>
+
+      <label for="sr1"> 검색 </label>
+      <input type="search" id="sr1" name="sr2" autofocus><br>
+      <!-- search 타입은 글씨를 쓰면 옆에 x 표시가 뜬다 -->
+      <!-- autofocus 설정을 하면 페이지를 열었을 때 
+            그 칸에 자동으로 커서가 가있음 -->
+
+      <label for="url1"> 홈페이지 </label>
+      <input type="url" id="url1" name="sr3" placeholder="http://"><br>
+      <!-- placeholder는 화면 상으로는 보이지만 클릭해서 작성하면 사라짐
+      보통 설명글을 달 때 사용함 -->
+      <label for="e1"> E-mail </label>
+      <input type="email" id="e1"><br>
+      <!-- @가 포함되지 않으면 @이 없다고 뜸 -->
+
+      <label for="t1"> 연락처 </label>
+      <input type="tel" id="t1"><br>
+      <!-- 키보드가 숫자판으로 바뀜 -->
+
+      </fieldset>
+
+      <fieldset>
+            <!-- radio 버튼은 name 반드시 동일해야 함 -->
+            <legend> 혈액형 </legend>
+            <input type="radio" name="bl" value="A"> A형
+            <input type="radio" name="bl" value="B"> B형
+            <input type="radio" name="bl" value="O"> O형
+            <input type="radio" name="bl" value="AB"> AB형
+            <!-- name만 쓰면 주소창에 bl 후에 데이터가 안 찍혀 있음
+            value를 추가해줘야 데이터가 전송됨!! 
+            name이 다르면 다른 그룹이라고 생각해서 radio일지라도 중복 선택이 가능해짐-->
+      </fieldset>
+
+      <fieldset>
+            <legend> 관심사 </legend>
+            <!-- checbox는 name을 같게 설정해도 상관 없음 
+            기존에 다중 선택이 옵션으로 들어간 거라 다중 선택이 됨.
+             -->
+            <input type="checkbox" name="i1" value="mv" checked> 영화
+            <input type="checkbox" name="i1" value="gm"> 게임
+            <input type="checkbox" name="i1" value="bo"> 독서
+            <!-- 미리 체크되어 있게 하고 싶으면 checked를 추가하면 됨 -->
+            <input type="number" min="0" max="10" step="2"
+            size="10" value="4" name="num1"> <br>
+            <!-- name은 정보가 넘어가는 바구니 역할~ -->
+            점수 <input type="range" min="0" max="10" step="2" value="5"> <br>
+
+            <input type="button" value="table 팝업" onclick="window.open('table.html', 'popping', 'width=300, height=300')"><br>
+            <input type="button" value="cat 팝업" onmouseover="window.open('flyingcat.jpg', 'popping', 'width=300, height=300')"><br>
+            <!-- 버튼을 누르면 팝업이 뜨게 하고 싶다~ 이건 자바스크립트로 해야 함 -->
+            <!-- onclick: 버튼을 눌렀을 때, window.open('뜰 창(이미지 파일도 가능)', '이름??', '뜨는 창 크기') -->
+
+            <input type="file"> 파일
+            <input type="hidden" name="hd1" value="덕성여대">
+
+            <input type="date" min="2023-01-01" max="2023-04-30" step="10">
+            <!-- step으로 인해 10일마다 선택 가능 -->
+            <input type="month">
+            <input type="week"><br>
+            <input type="time">
+            <input type="datetime-local">
+      </fieldset>
+
+      <input type="submit" value="전송">
+      <input type="reset" value="다시 입력">
+      <input type="image" src="flyingcat.jpg" width="200px">
+      <!-- image가 submit이랑 똑같은 역할을 함 -->
+
+      </form>
+
+      <ul> 
+            <li> 봄 </li>
+            <li> 여름 </li>
+            <li> 가을 </li>
+            <li> 겨울 </li>
+      </ul>
+
+      <h3> game </h3>
+      <ol type="1" start="0"> 
+            <li> rhythm</li>
+            <li> rpg</li>
+            <li> puzzle</li>
+
+      </ol>
+      
+</body>
+</html>
